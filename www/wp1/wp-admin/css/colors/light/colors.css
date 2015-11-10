@@ -1,0 +1,550 @@
+/*
+ * Button mixin- creates 3d-ish button effect with correct
+ * highlights/shadows, based on a base color.
+ */
+/* line 6, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+html {
+  background: #f5f5f5; }
+
+/* Links */
+/* line 13, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+a {
+  color: #0073aa; }
+  /* line 18, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+  a:hover,
+  a:active,
+  a:focus {
+    color: #0096dd; }
+
+/* line 26, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#media-upload a.del-link:hover,
+div.dashboard-widget-submit input:hover,
+.subsubsub a:hover,
+.subsubsub a.current:hover {
+  color: #0096dd; }
+
+/* Forms */
+/* line 33, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+input[type=checkbox]:checked:before {
+  color: #04a4cc; }
+
+/* line 37, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+input[type=radio]:checked:before {
+  background: #04a4cc; }
+
+/* line 42, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui input[type="reset"]:hover,
+.wp-core-ui input[type="reset"]:active {
+  color: #0096dd; }
+
+/* Core UI */
+/* line 50, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui .button-primary {
+  background: #04a4cc;
+  border-color: #037c9a;
+  color: white;
+  box-shadow: inset 0 1px 0 #22cffb, 0 1px 0 rgba(0, 0, 0, 0.15); }
+  /* line 12, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_mixins.scss */
+  .wp-core-ui .button-primary:hover,
+  .wp-core-ui .button-primary:focus {
+    background: #0490b3;
+    border-color: #036881;
+    color: white;
+    box-shadow: inset 0 1px 0 #09cafa; }
+  /* line 19, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_mixins.scss */
+  .wp-core-ui .button-primary:focus {
+    box-shadow: inset 0 1px 0 #09cafa, 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); }
+  /* line 25, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_mixins.scss */
+  .wp-core-ui .button-primary:active {
+    background: #037c9a;
+    border-color: #036881;
+    color: white;
+    box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5), 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8); }
+  /* line 37, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_mixins.scss */
+  .wp-core-ui .button-primary[disabled],
+  .wp-core-ui .button-primary:disabled,
+  .wp-core-ui .button-primary.button-primary-disabled,
+  .wp-core-ui .button-primary.disabled {
+    color: #c7cfd1 !important;
+    background: #0384a4 !important;
+    border-color: #036881 !important;
+    text-shadow: none !important; }
+
+/* line 54, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui .wp-ui-primary {
+  color: #333;
+  background-color: #e5e5e5; }
+
+/* line 58, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui .wp-ui-text-primary {
+  color: #e5e5e5; }
+
+/* line 62, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui .wp-ui-highlight {
+  color: #fff;
+  background-color: #888; }
+
+/* line 66, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui .wp-ui-text-highlight {
+  color: #888; }
+
+/* line 70, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui .wp-ui-notification {
+  color: #fff;
+  background-color: #d64e07; }
+
+/* line 74, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui .wp-ui-text-notification {
+  color: #d64e07; }
+
+/* line 78, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-core-ui .wp-ui-text-icon {
+  color: #999; }
+
+/* List tables */
+/* line 89, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wrap .add-new-h2:hover, .wrap .page-title-action:hover,
+.tablenav .tablenav-pages a:hover,
+.tablenav .tablenav-pages a:focus {
+  color: #333;
+  background-color: #e5e5e5; }
+
+/* line 94, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.view-switch a.current:before {
+  color: #e5e5e5; }
+
+/* line 98, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.view-switch a:hover:before {
+  color: #d64e07; }
+
+/* Admin Menu */
+/* line 107, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+  background: #e5e5e5; }
+
+/* line 111, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu a {
+  color: #333; }
+
+/* line 115, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu div.wp-menu-image:before {
+  color: #999; }
+
+/* line 122, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu a:hover,
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+  color: #fff;
+  background-color: #888; }
+
+/* line 128, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu li.menu-top:hover div.wp-menu-image:before,
+#adminmenu li.opensub > a.menu-top div.wp-menu-image:before {
+  color: #ccc; }
+
+/* Active tabs use a bottom border color that matches the page background color. */
+/* line 137, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.about-wrap h2 .nav-tab-active,
+.nav-tab-active,
+.nav-tab-active:hover {
+  background-color: #f5f5f5;
+  border-bottom-color: #f5f5f5; }
+
+/* Admin Menu: submenu */
+/* line 149, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu .wp-submenu,
+#adminmenu .wp-has-current-submenu .wp-submenu,
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu,
+#adminmenu a.wp-has-current-submenu:focus + .wp-submenu {
+  background: #fff; }
+
+/* line 153, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
+  border-right-color: #fff; }
+
+/* line 157, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu .wp-submenu .wp-submenu-head {
+  color: #686868; }
+
+/* line 165, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu .wp-submenu a,
+#adminmenu .wp-has-current-submenu .wp-submenu a,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu a,
+#adminmenu a.wp-has-current-submenu:focus + .wp-submenu a,
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu a {
+  color: #686868; }
+  /* line 168, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+  #adminmenu .wp-submenu a:focus,
+  #adminmenu .wp-submenu a:hover,
+  #adminmenu .wp-has-current-submenu .wp-submenu a:focus,
+  #adminmenu .wp-has-current-submenu .wp-submenu a:hover,
+  .folded #adminmenu .wp-has-current-submenu .wp-submenu a:focus,
+  .folded #adminmenu .wp-has-current-submenu .wp-submenu a:hover,
+  #adminmenu a.wp-has-current-submenu:focus + .wp-submenu a:focus,
+  #adminmenu a.wp-has-current-submenu:focus + .wp-submenu a:hover,
+  #adminmenu .wp-has-current-submenu.opensub .wp-submenu a:focus, #adminmenu .wp-has-current-submenu.opensub .wp-submenu a:hover {
+    color: #04a4cc; }
+
+/* Admin Menu: current */
+/* line 178, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu .wp-submenu li.current a,
+#adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a,
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a {
+  color: #333; }
+  /* line 181, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+  #adminmenu .wp-submenu li.current a:hover,
+  #adminmenu .wp-submenu li.current a:focus,
+  #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a:hover,
+  #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a:focus,
+  #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a:hover, #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a:focus {
+    color: #04a4cc; }
+
+/* line 187, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+ul#adminmenu a.wp-has-current-submenu:after,
+ul#adminmenu > li.current > a.current:after {
+  border-right-color: #f5f5f5; }
+
+/* line 194, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+#adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head,
+.folded #adminmenu li.current.menu-top {
+  color: #fff;
+  background: #888; }
+
+/* line 206, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu li.wp-has-current-submenu div.wp-menu-image:before,
+#adminmenu a.current:hover div.wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu a:focus div.wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu.opensub div.wp-menu-image:before,
+#adminmenu li:hover div.wp-menu-image:before,
+#adminmenu li a:focus div.wp-menu-image:before,
+#adminmenu li.opensub div.wp-menu-image:before,
+.ie8 #adminmenu li.opensub div.wp-menu-image:before {
+  color: #ccc; }
+
+/* Admin Menu: bubble */
+/* line 214, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu .awaiting-mod,
+#adminmenu .update-plugins {
+  color: #fff;
+  background: #d64e07; }
+
+/* line 222, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#adminmenu li.current a .awaiting-mod,
+#adminmenu li a.wp-has-current-submenu .update-plugins,
+#adminmenu li:hover a .awaiting-mod,
+#adminmenu li.menu-top:hover > a .update-plugins {
+  color: #333;
+  background: #fff; }
+
+/* Admin Menu: collapse button */
+/* line 230, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#collapse-menu {
+  color: #777; }
+
+/* line 234, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#collapse-menu:hover {
+  color: #333; }
+
+/* line 238, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#collapse-button div:after {
+  color: #999; }
+
+/* line 242, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#collapse-menu:hover #collapse-button div:after {
+  color: #555; }
+
+/* Admin Bar */
+/* line 249, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar {
+  color: #333;
+  background: #e5e5e5; }
+
+/* line 257, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .ab-item,
+#wpadminbar a.ab-item,
+#wpadminbar > #wp-toolbar span.ab-label,
+#wpadminbar > #wp-toolbar span.noticon {
+  color: #333; }
+
+/* line 264, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .ab-icon,
+#wpadminbar .ab-icon:before,
+#wpadminbar .ab-item:before,
+#wpadminbar .ab-item:after {
+  color: #999; }
+
+/* line 272, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
+#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
+#wpadminbar.nojs .ab-top-menu > li.menupop:hover > .ab-item,
+#wpadminbar .ab-top-menu > li.menupop.hover > .ab-item {
+  color: #04a4cc;
+  background: #fff; }
+
+/* line 279, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar:not(.mobile) > #wp-toolbar li:hover span.ab-label,
+#wpadminbar:not(.mobile) > #wp-toolbar li.hover span.ab-label,
+#wpadminbar:not(.mobile) > #wp-toolbar a:focus span.ab-label {
+  color: #04a4cc; }
+
+/* line 286, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar:not(.mobile) li:hover .ab-icon:before,
+#wpadminbar:not(.mobile) li:hover .ab-item:before,
+#wpadminbar:not(.mobile) li:hover .ab-item:after,
+#wpadminbar:not(.mobile) li:hover #adminbarsearch:before {
+  color: #ccc; }
+
+/* Admin Bar: submenu */
+/* line 293, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .menupop .ab-sub-wrapper {
+  background: #fff; }
+
+/* line 298, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary,
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
+  background: #f7f7f7; }
+
+/* line 305, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .ab-submenu .ab-item,
+#wpadminbar .quicklinks .menupop ul li a,
+#wpadminbar .quicklinks .menupop.hover ul li a,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a {
+  color: #686868; }
+
+/* line 310, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .quicklinks li .blavatar,
+#wpadminbar .menupop .menupop > .ab-item:before {
+  color: #999; }
+
+/* line 329, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .quicklinks .menupop ul li a:hover,
+#wpadminbar .quicklinks .menupop ul li a:focus,
+#wpadminbar .quicklinks .menupop ul li a:hover strong,
+#wpadminbar .quicklinks .menupop ul li a:focus strong,
+#wpadminbar .quicklinks .menupop.hover ul li a:hover,
+#wpadminbar .quicklinks .menupop.hover ul li a:focus,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
+#wpadminbar li:hover .ab-icon:before,
+#wpadminbar li:hover .ab-item:before,
+#wpadminbar li a:focus .ab-icon:before,
+#wpadminbar li .ab-item:focus:before,
+#wpadminbar li.hover .ab-icon:before,
+#wpadminbar li.hover .ab-item:before,
+#wpadminbar li:hover #adminbarsearch:before,
+#wpadminbar li #adminbarsearch.adminbar-focused:before {
+  color: #04a4cc; }
+
+/* line 336, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .quicklinks li a:hover .blavatar,
+#wpadminbar .menupop .menupop > .ab-item:hover:before,
+#wpadminbar.mobile .quicklinks .ab-icon:before,
+#wpadminbar.mobile .quicklinks .ab-item:before {
+  color: #04a4cc; }
+
+/* line 341, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar.mobile .quicklinks .hover .ab-icon:before,
+#wpadminbar.mobile .quicklinks .hover .ab-item:before {
+  color: #999; }
+
+/* Admin Bar: search */
+/* line 348, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar #adminbarsearch:before {
+  color: #999; }
+
+/* line 352, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar > #wp-toolbar > #wp-admin-bar-top-secondary > #wp-admin-bar-search #adminbarsearch input.adminbar-input:focus {
+  color: #333;
+  background: #f7f7f7; }
+
+/* line 357, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar #adminbarsearch .adminbar-input::-webkit-input-placeholder {
+  color: #333;
+  opacity: 0.7; }
+
+/* line 358, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar #adminbarsearch .adminbar-input:-moz-placeholder {
+  color: #333;
+  opacity: 0.7; }
+
+/* line 359, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar #adminbarsearch .adminbar-input::-moz-placeholder {
+  color: #333;
+  opacity: 0.7; }
+
+/* line 360, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar #adminbarsearch .adminbar-input:-ms-input-placeholder {
+  color: #333;
+  opacity: 0.7; }
+
+/* Admin Bar: my account */
+/* line 365, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
+  border-color: #f7f7f7;
+  background-color: #f7f7f7; }
+
+/* line 370, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar #wp-admin-bar-user-info .display-name {
+  color: #333; }
+
+/* line 374, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar #wp-admin-bar-user-info a:hover .display-name {
+  color: #04a4cc; }
+
+/* line 378, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#wpadminbar #wp-admin-bar-user-info .username {
+  color: #686868; }
+
+/* Pointers */
+/* line 385, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-pointer .wp-pointer-content h3 {
+  background-color: #04a4cc;
+  border-color: #0490b3; }
+
+/* line 390, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-pointer .wp-pointer-content h3:before {
+  color: #04a4cc; }
+
+/* line 397, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-pointer.wp-pointer-top .wp-pointer-arrow,
+.wp-pointer.wp-pointer-top .wp-pointer-arrow-inner,
+.wp-pointer.wp-pointer-undefined .wp-pointer-arrow,
+.wp-pointer.wp-pointer-undefined .wp-pointer-arrow-inner {
+  border-bottom-color: #04a4cc; }
+
+/* Media */
+/* line 405, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.media-item .bar,
+.media-progress-bar div {
+  background-color: #04a4cc; }
+
+/* line 409, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.details.attachment {
+  box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 7px #04a4cc; }
+
+/* line 415, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.attachment.details .check {
+  background-color: #04a4cc;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #04a4cc; }
+
+/* line 420, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.media-selection .attachment.selection.details .thumbnail {
+  -webkit-box-shadow: 0px 0px 0px 1px #fff, 0px 0px 0px 3px #04a4cc;
+  box-shadow: 0px 0px 0px 1px #fff, 0px 0px 0px 3px #04a4cc; }
+
+/* Themes */
+/* line 434, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.theme-browser .theme.active .theme-name,
+.theme-browser .theme.add-new-theme a:hover:after,
+.theme-browser .theme.add-new-theme a:focus:after {
+  background: #04a4cc; }
+
+/* line 439, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.theme-browser .theme.add-new-theme a:hover span:after,
+.theme-browser .theme.add-new-theme a:focus span:after {
+  color: #04a4cc; }
+
+/* line 444, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.theme-section.current,
+.theme-filter.current {
+  border-bottom-color: #e5e5e5; }
+
+/* line 448, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+body.more-filters-opened .more-filters {
+  color: #333;
+  background-color: #e5e5e5; }
+
+/* line 453, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+body.more-filters-opened .more-filters:before {
+  color: #333; }
+
+/* line 458, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+body.more-filters-opened .more-filters:hover,
+body.more-filters-opened .more-filters:focus {
+  background-color: #888;
+  color: #fff; }
+
+/* line 464, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+body.more-filters-opened .more-filters:hover:before,
+body.more-filters-opened .more-filters:focus:before {
+  color: #fff; }
+
+/* Widgets */
+/* line 470, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.widgets-chooser li.widgets-chooser-selected {
+  background-color: #888;
+  color: #fff; }
+
+/* line 476, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.widgets-chooser li.widgets-chooser-selected:before,
+.widgets-chooser li.widgets-chooser-selected:focus:before {
+  color: #fff; }
+
+/* Customize */
+/* line 482, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+#customize-theme-controls .widget-area-select .selected {
+  background-color: #888;
+  color: #fff; }
+
+/* jQuery UI Slider */
+/* line 491, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-slider .ui-slider-handle,
+.wp-slider .ui-slider-handle.ui-state-hover,
+.wp-slider .ui-slider-handle.focus {
+  background: #04a4cc;
+  border-color: #037c9a;
+  box-shadow: inset 0 1px 0 #22cffb, 0 1px 0 rgba(0, 0, 0, 0.15); }
+
+/* Responsive Component */
+/* line 499, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+div#wp-responsive-toggle a:before {
+  color: #999; }
+
+/* line 503, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-responsive-open div#wp-responsive-toggle a {
+  border-color: transparent;
+  background: #888; }
+
+/* line 509, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-responsive-open #wpadminbar #wp-admin-bar-menu-toggle a {
+  background: #fff; }
+
+/* line 513, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.wp-responsive-open #wpadminbar #wp-admin-bar-menu-toggle .ab-icon:before {
+  color: #999; }
+
+/* TinyMCE */
+/* line 523, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/_admin.scss */
+.mce-container.mce-menu .mce-menu-item:hover,
+.mce-container.mce-menu .mce-menu-item.mce-selected,
+.mce-container.mce-menu .mce-menu-item:focus,
+.mce-container.mce-menu .mce-menu-item-normal.mce-active,
+.mce-container.mce-menu .mce-menu-item-preview.mce-active {
+  background: #04a4cc; }
+
+/* temporary fix for admin-bar hover color */
+/* line 30, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/light/colors.scss */
+#wpadminbar .ab-top-menu > li:hover > .ab-item,
+#wpadminbar .ab-top-menu > li.hover > .ab-item,
+#wpadminbar > #wp-toolbar > #wp-admin-bar-root-default li:hover span.ab-label,
+#wpadminbar > #wp-toolbar > #wp-admin-bar-top-secondary li.hover span.ab-label,
+#wpadminbar .ab-top-menu > li > .ab-item:focus,
+#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
+#wpadminbar.nojs .ab-top-menu > li.menupop:hover > .ab-item,
+#wpadminbar .ab-top-menu > li.menupop.hover > .ab-item {
+  color: #333; }
+
+/* Override the theme filter highlight color for this scheme */
+/* line 36, Z:/home/dictionary_en/www/wp1/wordpress/wp-admin/css/colors/light/colors.scss */
+.theme-section.current,
+.theme-filter.current {
+  border-bottom-color: #04a4cc; }
+
+/*# sourceMappingURL=colors.css.map */

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/www/inc/add_scripts.inc.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/inc/data.inc.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/inc/lib.inc.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/inc/menu.inc.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/inc/test.inc.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/data_fr.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/data_fr_petrov.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/data_js.js" charset="UTF-8" />
+  </component>
+</project>

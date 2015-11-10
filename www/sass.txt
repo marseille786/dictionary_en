@@ -1,0 +1,128 @@
+/******************************************
+*	Основы SASS
+******************************************/
+
+/* Запуск SASS (в консоли) */
+sass --watch . --style expanded
+
+/*Переменные:*/
+$color: #f00;
+
+/* Миксины */
+@mixin box-sizing {		/* Объявление */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin box-sizing($box) {
+	-webkit-box-sizing: $box;
+	-moz-box-sizing: $box;
+	box-sizing: $box;
+}
+
+@include box-sizing;		/* Применение */
+
+@include box-sizing(border-box);
+
+/*Хэши:*/
+$colors: (
+	"red": #f00,
+	"green": #0f0,
+	"blue": #00f
+);
+
+/*Получение данных из хэша:*/
+background: map-get($colors, "red");
+
+/*Вложенность*/
+.module {
+	div {
+		color: #f00;
+	}
+	&:hover {
+		color: #0f0;
+	}
+	+ div {
+		color: #00f;
+	}
+}
+
+/* Placeholders */
+%paragraph {		/* Задание */
+	font-size: 1.4em;
+}
+
+p {		/* Применение */
+	@extend %paragraph;
+}
+
+/* Наследование */
+.module2 {
+	@extend .module;
+}
+
+/* Функции */
+color: darken($colorRed, 15%);	/*Затемнение*/
+color: lighten($colorRed, 15%);	/*Освеетление*/
+
+/* Присоединение сторонних файлов */
+@import "fonts";	/* подключаем файл _fonts.scss в одной папке с текущим файлом */
+
+
+
+
+
+
+/******************************************
+*	SASS advanced
+******************************************/
+
+/* if() function */
+$var: true;
+
+.module {
+	background: if($var, orange, red);	/* => orange */
+}
+
+/* @if directive */
+$width: 580px;
+
+.module {
+	@if $width >= 480px and $width < 768px {
+		@media (min-width: 480px) {
+			width: 33%;
+		}
+	}
+	@else if $width >= 768px {
+		@media (min-width: 768px) {
+			width: 33%;
+		}
+	}
+	@else {
+		width: 100%;
+	}
+}
+
+/* Отладка */
+@debug "width = #{$width}";
+@warn "width = #{$width}";
+
+/* @for loop */
+$list: 10px, 20px, 30px, 40px;
+
+.module {
+	@for $i from 1 to 4 {	/* => не включает последнюю итерацию */
+		&:nth-child(#{$i}) {
+			padding: nth($list, $i);
+		}
+	}
+}
+
+.module {
+	@for $i from 1 through 4 {	/* => включает последнюю итерацию */
+		&:nth-child(#{$i}) {
+			padding: nth($list, $i);
+		}
+	}
+}
